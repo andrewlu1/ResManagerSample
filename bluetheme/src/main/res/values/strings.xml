@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BlueTheme</string>
+    <string name="theme_view_text">这是BlueTheme中的文本资源</string>
+</resources>

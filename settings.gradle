@@ -1,0 +1,2 @@
+//include ':app','skinplugin'
+include ':app', ':bluetheme'

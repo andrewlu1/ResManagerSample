@@ -1,0 +1,5 @@
+<resources>
+    <string name="t0">some other text</string>
+    <string name="theme_view_text">这是主工程中的文本资源</string>
+    <string name="app_name">PluginProject</string>
+</resources>

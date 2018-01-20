@@ -1,0 +1,34 @@
+apply plugin: 'com.android.application'
+apply plugin: 'cn.andrewlu.plugins.skinplugin'
+
+
+android {
+    compileSdkVersion 26
+
+
+
+    defaultConfig {
+        applicationId "cn.andrewlu.bluetheme"
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false" //不显示log
+            zipAlignEnabled true     //Zipalign优化
+            shrinkResources true    // 移除无用的resource文件
+            minifyEnabled true     //混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //资源管理工具类。
+    implementation 'cn.andrewlu:resmanager:+'
+}
