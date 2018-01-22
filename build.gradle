@@ -5,7 +5,8 @@ buildscript {
     repositories {
         google()
         jcenter()
-        maven {url "https://dl.bintray.com/andrewlu1/maven/"}
+        maven { url "https://dl.bintray.com/andrewlu1/maven/" }
+//        mavenLocal()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
@@ -16,7 +17,7 @@ buildscript {
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:+'
         classpath 'com.github.dcendents:android-maven-plugin:+'
         //用于定制皮肤插件的编译。
-        classpath "cn.andrewlu.plugins:skinplugin:1.0.0"
+        classpath "cn.andrewlu.plugins:skinplugin:+"
     }
 }
 
@@ -24,7 +25,8 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven {url "https://dl.bintray.com/andrewlu1/maven/"}
+        maven { url "https://dl.bintray.com/andrewlu1/maven/" }
+//        mavenLocal()
     }
 }
 
