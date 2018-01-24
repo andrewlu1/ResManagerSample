@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'cn.andrewlu.plugins.skinplugin'
 
 
+
 android {
     compileSdkVersion 26
 
@@ -17,7 +18,7 @@ android {
         release {
             buildConfigField "boolean", "LOG_DEBUG", "false" //不显示log
             zipAlignEnabled true     //Zipalign优化
-            shrinkResources true    // 移除无用的resource文件
+            shrinkResources false    // 不能移除无用资源，因为皮肤中所有资源都会被当成无引用资源
             minifyEnabled true     //混淆
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -26,20 +27,19 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
 }
 
 /**
  * skinplugin 专有配置，apply plugin 后会有代码自动提示各字段。
  */
 skinConfig {
-    name = "红色皮肤" //可选，可在Manifest.xml中配置application:label 作为name.
-    author = "andrewlu"
-    description = "这是一个测试皮肤工程"
+    name = "绿色皮肤" //可选，可在Manifest.xml中配置application:label 作为name.
+    author = "andrewlu11"
+    description = "这是一个测试皮肤工程。。。"
     tags = ["美丽", "夜空蓝", "水晶效果"]
     previewDrawables = ["preview_pic_0"]
     minCompileVersion = 1
     maxCompileVersion = 5
     userId = "andrewlu1"
-    apiKey = "1234567890qwertyuiop"
+    apiKey = "11111"
 }

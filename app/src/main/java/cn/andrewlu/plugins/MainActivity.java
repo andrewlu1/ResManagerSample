@@ -1,6 +1,5 @@
 package cn.andrewlu.plugins;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -9,14 +8,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import cn.andrewlu.resmanager.ResManager;
-import cn.andrewlu.resmanager.Skin;
+import cn.andrewlu.resmanager.SkinActivity;
 import cn.andrewlu.resmanager.dao.ThemeInfo;
 
 /**
  * Created by andrewlu on 2018/1/18.
  */
 
-public class MainActivity extends Activity {
+public class MainActivity extends SkinActivity {
     private TextView themeViewText;
     private ListView themeListView;
     private ThemeInfoAdapter adapter;
@@ -24,8 +23,6 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        Skin.setXmlLayoutSkinnable(this);
 
         setContentView(R.layout.activity_main);
         themeViewText = findViewById(R.id.previewText);
